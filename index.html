@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Vote Parker</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <!--All this was coded by me (Parker). Please do a favor and vote for me-->
+    <body>
+        <div class="logo">
+            <img src="logo.png" width="350em"/>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">Why should you vote for Parker?</button>
+            <div class="content">
+                <p>Parker promises to <strong>lower taxes</strong>, <strong>raise minimum wage</strong> to $20, <strong>lower the taxes for downstairs classes</strong>, which will <strong>help with debt</strong>, and <strong>support state rights</strong>.</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">Who's the Vice President?</button>
+            <div class="content">
+                <p>The vice president of Parker's campaign is <strong>Lucas Hengstebeck</strong>.</p>
+            </div>
+            <!--Collapsible Javascript-->
+            <script>var coll = document.getElementsByClassName("collapsible");
+                var i;
+                
+                for (i = 0; i < coll.length; i++) {
+                  coll[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                      content.style.display = "none";
+                    } else {
+                      content.style.display = "block";
+                    }
+                  });
+                }</script>
+                <script>
+                    var coll = document.getElementsByClassName("collapsible");
+                    var i;
+                    
+                    for (i = 0; i < coll.length; i++) {
+                      coll[i].addEventListener("click", function() {
+                        this.classList.toggle("active");
+                        var content = this.nextElementSibling;
+                        if (content.style.maxHeight){
+                          content.style.maxHeight = null;
+                        } else {
+                          content.style.maxHeight = content.scrollHeight + "px";
+                        }
+                      });
+                    }
+                    </script>
+            <div class="footer">
+                <h5>Make the right choice. Vote Parker.</h5>
+            </div>
+    </body>
+</html>
